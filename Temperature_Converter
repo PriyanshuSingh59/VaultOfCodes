@@ -1,0 +1,18 @@
+def convert_temperature(temp, unit):
+    if unit == 'F':
+        celsius = (temp - 32) * 5 / 9
+        return round(celsius, 2)
+    elif unit == 'C':
+        fahrenheit = (temp * 9 / 5) + 32
+        return round(fahrenheit, 2)
+    else:
+        return "Invalid unit. Please use 'F' or 'C'."
+ 
+# Example usage:
+fahrenheit_temp = 97.6
+converted_celsius = convert_temperature(fahrenheit_temp, 'F')
+print(f"{fahrenheit_temp}°F is {converted_celsius}°C")
+# Example usage:
+celsius_temp = 36.44 
+converted_fahrenheit = convert_temperature(celsius_temp, 'C')
+print(f"{celsius_temp}°C is {converted_fahrenheit}°F")
